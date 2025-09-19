@@ -146,7 +146,7 @@ Chat Usage
 
 ## 🏆 Challenges & Lessons Learned
 
-- **Axios & API Integration:** Gained experience integrating Axios for CRUD operations and handling asynchronous requests effectively.  
+- **Axios & API Integration:** First time integrating Axios for CRUD operations and handling async requests.  
 - **State Management:** Learned to manage tasks state across multiple components using Context API and custom hooks.  
 - **Pagination & Scroll Handling:** Implemented smooth pagination while maintaining scroll position to improve user experience.  
 - **Responsive Design:** Built a fully responsive interface using Tailwind CSS for both mobile and desktop screens.  
