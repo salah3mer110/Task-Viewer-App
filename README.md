@@ -141,7 +141,9 @@ export default {
 Supabase – Backend for task data (CRUD operations)
 
 Chat Usage
-- **code rearrangement,adding comments, testing & checking unkown bugs.
+-Code Rearrangement,Adding Comments, Testing & Checking Unkown Bugs.
+
+
 ## 🏆 Challenges & Lessons Learned
 
 - **Axios & API Integration:** Gained experience integrating Axios for CRUD operations and handling asynchronous requests effectively.  
