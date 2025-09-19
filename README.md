@@ -19,7 +19,7 @@ Follow these steps to set up the project locally.
 ### 1. Clone the repository
 
 ```bash
-```git clone https://github.com/<your-username>/<repo-name>.git
+git clone https://github.com/<your-username>/<repo-name>.git
 cd <repo-name>
 ```
 2. Install dependencies
@@ -126,21 +126,17 @@ export default {
 5. Start the development server
 ```npm run dev```
 
-
-Open http://localhost:5173
- in your browser.
-
 🛠️ Technologies Used
 
-- **React.js – Frontend library for building UI
+- React.js – Frontend library for building UI
 
-- **Context API
+- Context API
 
-- **Tailwind CSS – Utility-first CSS framework for styling
+- Tailwind CSS – Utility-first CSS framework for styling
 
-- **Axios – HTTP client for API requests
+- Axios – HTTP client for API requests
 
-- **React Icons – Vector icons for UI
+- React Icons – Vector icons for UI
 
 Supabase – Backend for task data (CRUD operations)
 
