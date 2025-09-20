@@ -111,9 +111,9 @@ function TaskForm({
       </div>
 
       {/* Bottom inputs: Priority, Category, and Submit button */}
-      <div className="w-[80%]">
+      <div className="w-[80%] lg:flex ">
         <div className="flex justify-between items-center w-full h-auto">
-          <div className="flex justify-between w-full flex-col lg:flex-row lg:w-1/2 lg:gap-7">
+          <div className="flex justify-between w-full flex-col lg:flex-row lg:w-[55%] lg:gap-10">
             {/* Priority select */}
             <label className="flex flex-col pb-4 w-full">
               <span className="mb-1 font-medium text-secondary-100">

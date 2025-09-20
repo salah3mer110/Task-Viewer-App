@@ -35,7 +35,13 @@ function TaskCard({ task, categories }) {
   }
 
   return (
-    <li className=" border-2 border-primary-800 bg-secondary-100 rounded-md font-nunito flex flex-col">
+    <li className="relative border-2 border-primary-800 bg-secondary-100 rounded-md font-nunito flex flex-col">
+      {/* Delete button */}
+      <MdDelete
+        onClick={() => handleTaskDelete(id)}
+        className="absolute right-2 top-2 text-red-700 text-2xl cursor-pointer hover:text-red-800"
+      />
+
       {/* Top content: Image, title, priority, category */}
       <div className="flex items-center gap-4 p-4">
         <img
@@ -44,13 +50,7 @@ function TaskCard({ task, categories }) {
           className={`w-20 h-20 rounded-full object-cover filter ${image_filter}`}
         />
         <div className="flex-1">
-          <p
-            className={`font-bold text-secondary-900 ${
-              isDone && "line-through"
-            }`}
-          >
-            {title}
-          </p>
+          <p className="font-semibold text-secondary-900">{title}</p>
 
           {/* Priority & category labels */}
           <div className="mt-4 flex flex-wrap gap-2">
@@ -82,8 +82,17 @@ function TaskCard({ task, categories }) {
           </div>
         </div>
       </div>
+
       {/* Bottom bar: Edit & Done */}
       <div className="flex justify-between items-center bg-secondary-200 px-4 py-2 rounded-b-md gap-2">
+        <button
+          className="flex items-center gap-2 text-primary-900 hover:text-primary-700"
+          onClick={() => setEditBtn(true)}
+        >
+          <FiEdit />
+          <span>Edit</span>
+        </button>
+
         <label className="flex items-center gap-2 bg-green-600 text-secondary-100 hover:bg-green-500 px-3 py-1 rounded cursor-pointer">
           <input
             type="checkbox"
@@ -96,21 +105,6 @@ function TaskCard({ task, categories }) {
           />
           <span>Done</span>
         </label>
-        <div className="flex gap-6 items-center">
-          <button
-            className="p-2 flex items-center rounded-md gap-1 font-semibold text-primary-900 hover:text-primary-900 hover:bg-secondary-300"
-            onClick={() => setEditBtn(true)}
-          >
-            <FiEdit className="text-lg pb-1" />
-            <span>Edit</span>
-          </button>
-
-          {/* Delete button */}
-          <MdDelete
-            onClick={() => handleTaskDelete(id)}
-            className=" right-2 top-2 text-red-700 text-3xl cursor-pointer hover:text-red-800"
-          />
-        </div>
       </div>
       {editBtn && (
         <TaskForm
