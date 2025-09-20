@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useCreate } from "../hooks/useCreate";
-import TextInput from "./common/textInput";
+import TextInput from "./common/TextInput";
 import { IoIosClose } from "react-icons/io";
 import { useTasks } from "../contexts/TasksContext";
 import { usePatch } from "../hooks/usePatch";
