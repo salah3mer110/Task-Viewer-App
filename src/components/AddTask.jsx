@@ -35,6 +35,7 @@ function AddTask() {
         actionType={"create"}
         handleClick={() => setAddTask(false)}
         setAddTask={setAddTask}
+        required={true}
       />
     </div>
   );

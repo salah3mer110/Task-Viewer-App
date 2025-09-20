@@ -12,6 +12,7 @@ function TaskForm({
   taskId = "", // Used for editing
   setAddTask,
   setEditBtn,
+  required,
 }) {
   // Local state for form fields
   const [title, setTitle] = useState("");
@@ -82,7 +83,7 @@ function TaskForm({
           placeholder={"Enter Task Title"}
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          required={"required"}
+          required={required}
         />
         <TextInput
           title={"Description"}
@@ -97,62 +98,63 @@ function TaskForm({
           onChange={(e) => setImageUrl(e.target.value)}
         />
         {/* Due date input */}
-        <label className="flex flex-col lg:w-[calc(85%/4)] w-full">
+        <label className="flex flex-col lg:w-[calc(85%/4)] w-full pb-4">
           <span className="mb-1 font-medium text-secondary-100">Due Date</span>
           <input
             type="date"
             className="border border-gray-300 rounded-md px-4 py-2 shadow-sm"
             value={dueDate}
             onChange={(e) => setDueDate(e.target.value)}
-            required="required"
+            required={required}
           />
         </label>
       </div>
 
       {/* Bottom inputs: Priority, Category, and Submit button */}
-      <div className="flex justify-between items-center w-[80%]">
-        <div className="flex justify-between w-[45%] flex-col lg:flex-row lg:w-[44%]">
-          {/* Priority select */}
-          <label className="flex flex-col">
-            <span className="mb-1 font-medium text-secondary-100">
-              Priority
-            </span>
-            <select
-              name="priority"
-              className="border border-gray-300 rounded-md px-4 py-2 shadow-sm"
-              value={priority}
-              onChange={(e) => setPriority(e.target.value)}
-            >
-              <option value="high">High</option>
-              <option value="medium">Medium</option>
-              <option value="low">Low</option>
-            </select>
-          </label>
+      <div className="w-[80%]">
+        <div className="flex justify-between items-center w-full h-auto">
+          <div className="flex justify-between w-full flex-col lg:flex-row lg:w-1/2 lg:gap-7">
+            {/* Priority select */}
+            <label className="flex flex-col pb-4 w-full">
+              <span className="mb-1 font-medium text-secondary-100">
+                Priority
+              </span>
+              <select
+                name="priority"
+                className="border border-gray-300 rounded-md px-4 py-2 shadow-sm"
+                value={priority}
+                onChange={(e) => setPriority(e.target.value)}
+              >
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+            </label>
 
-          {/* Category select */}
-          <label className="flex flex-col">
-            <span className="mb-1 font-medium text-secondary-100">
-              Category
-            </span>
-            <select
-              name="Filter Categories"
-              className="border border-gray-300 rounded-md px-4 py-2 shadow-sm"
-              value={categoryId}
-              onChange={(e) => setCategoryId(e.target.value)}
-            >
-              {categories.map((categ) => (
-                <option key={categ.id} value={categ.id}>
-                  {categ.name}
-                </option>
-              ))}
-            </select>
-          </label>
+            {/* Category select */}
+            <label className="flex flex-col pb-4 w-full">
+              <span className="mb-1 font-medium text-secondary-100">
+                Category
+              </span>
+              <select
+                name="Filter Categories"
+                className="border border-gray-300 rounded-md px-4 py-2 shadow-sm"
+                value={categoryId}
+                onChange={(e) => setCategoryId(e.target.value)}
+              >
+                {categories.map((categ) => (
+                  <option key={categ.id} value={categ.id}>
+                    {categ.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
         </div>
-
         {/* Submit button */}
         <button
           type="submit"
-          className="bg-green-500 text-lg mt-6 text-secondary-50 font-semibold px-9 py-2 rounded-lg h-fit hover:bg-green-600"
+          className="bg-green-500 w-full text-lg mt-6 text-secondary-50 font-semibold px-9 py-2 rounded-lg h-fit hover:bg-green-600 lg:w-fit"
         >
           Add
         </button>

@@ -51,7 +51,7 @@ function Tasks() {
         name="Filter Categories"
         value={selectedCategory}
         onChange={(e) => setSelectedCategory(e.target.value)}
-        className="border border-gray-300 rounded-md px-4 py-2 shadow-sm"
+        className="border border-gray-300 rounded-md px-4 py-2 shadow-sm mb-3"
       >
         <option value="">All Categories</option>
         {categories.map((categ) => (

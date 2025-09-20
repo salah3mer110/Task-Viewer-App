@@ -1,6 +1,6 @@
 function TextInput({ title, placeholder, value, onChange, required = "" }) {
   return (
-    <label className="flex flex-col lg:w-[calc(85%/4)] w-full">
+    <label className="flex flex-col lg:w-[calc(85%/4)] w-full pb-4">
       <span className="mb-1 font-medium text-secondary-100">{title}</span>
       <input
         type="text"

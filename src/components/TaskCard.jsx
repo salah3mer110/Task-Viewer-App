@@ -113,6 +113,7 @@ function TaskCard({ task, categories }) {
           taskId={id}
           setEditBtn={setEditBtn}
           handleClick={() => setEditBtn(false)}
+          required={false}
         />
       )}
     </li>
