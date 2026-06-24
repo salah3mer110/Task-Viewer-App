@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const ANON_KEY = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtieWJkdGFjb3F2Z2NpanJremt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYwMzUwNjAsImV4cCI6MjA3MTYxMTA2MH0.SAF_9jupuaVLHq0l7Zbew7t6avUdg_UkdVGqLZmHTQE`;
-const PROJECT_URL = `https://kbybdtacoqvgcijrkzkv.supabase.co/rest/v1`;
+const apiKey = import.meta.env.API_KEY;
+const apiUrl = import.meta.env.PROJECT_URL;
 export default axios.create({
-  baseURL: PROJECT_URL,
+  baseURL: apiUrl,
   headers: {
-    apikey: ANON_KEY,
-    Authorization: `Bearer ${ANON_KEY}`,
+    apikey: apiKey,
+    Authorization: `Bearer ${apiKey}`,
     "Content-Type": "application/json",
     prefer: "return=representation",
   },
