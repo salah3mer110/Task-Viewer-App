@@ -141,6 +141,10 @@ export default {
 Supabase – Backend for task data (CRUD operations)
 
 
+
+
+
+
 ## 🏆 Challenges & Lessons Learned
 
 - **Axios & API Integration:** First time integrating Axios for CRUD operations and handling async requests.  
