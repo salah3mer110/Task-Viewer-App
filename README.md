@@ -140,9 +140,6 @@ export default {
 
 Supabase – Backend for task data (CRUD operations)
 
-Chat Usage
--Code Rearrangement,Adding Comments, Testing & Checking Unkown Bugs.
-
 
 ## 🏆 Challenges & Lessons Learned
 
